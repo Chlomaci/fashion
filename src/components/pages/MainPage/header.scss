@@ -1,0 +1,268 @@
+.header{
+    background: rgb(250,227,182);
+    background: linear-gradient(rgba(250,227,182,1) 0%, rgba(250,227,182,1) 60%, rgba(255,255,255,1) 100%);
+    &__menubar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 45px 20px 0px 88px;
+        &-logo{
+            font-size: 48px;
+            font-weight: 600;
+        }
+        &-welcome{
+            button {
+                border: solid 1px #FAE3B6;
+                border-radius: 15px;
+                background-color: transparent;
+                width: 121px;
+                height: 57px;
+                cursor: pointer;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 36px;
+            }
+            .header__menubar-btn{
+                margin-right: 10px;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                &:hover{
+                    background: linear-gradient(77.49deg, #FDBB57 0%, rgba(251, 251, 251, 0) 100%);
+                    box-shadow: inset 4px 4px 4px #F2D09B,
+                                0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                }
+            }
+        }
+    }
+    &__promo{
+        min-height: 543px;
+        padding: 123px 80px 0px 88px;
+        &-wrapper{
+            display: flex;
+            justify-content: space-around;
+        }
+        &-content{
+            max-width: 556px;
+            position: relative;
+            z-index: 1;
+        }
+        &-title{
+            font-size: 64px;
+            font-weight: 600;
+        }
+        &-text{
+            font-size: 22px;
+            margin-top: 45px;
+        }
+        &-photo{
+            img{
+                border-radius: 0px 0px 0px 195px;
+                position: relative;
+                z-index: 1;
+            }
+        }
+    }
+    &__curves{
+        img{
+            margin-top: 95px;
+            position: relative;
+            width: 100%;
+            z-index: 1;
+        }
+        
+    }
+    &__rectangle{
+        position: absolute;
+        width: 28.5%;
+        height: 461px;
+        left: -11px;
+        top: 654px;
+
+        background: linear-gradient(360deg, #FFD18D 0%, rgba(255, 250, 243, 0) 100%);
+        border-radius: 72px;
+        z-index: 0;
+    }
+    &__points{
+        position: absolute;
+        left: 992px;
+        top: 646px;
+        z-index: 0;
+        img{
+            width: 130%;
+        }
+    }
+    &__fixed-overlay{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background:rgba(0, 0, 0, 0.5);
+        z-index: 100;
+        display: none;
+        &.active{
+            display: block;
+        }
+    }
+}
+
+.modal{
+    position: absolute;
+    border-radius: 25px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1440px;
+    min-height: 844px;
+    max-height: 844px;
+    display: block;
+    &_container{
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title, &__subtitle, &__subtitle a, &__or, &__rules, &__rules a, button{
+        text-align: center;
+        font-family: 'Frank Ruhl Libre';
+        font-weight: 500;
+        font-size: 22px;
+    }
+    &__subtitle, &__rules{
+        color: #868686;
+        a{
+            color: #F59C15;
+            text-decoration: none;
+        }
+    }
+    &__subtitle{
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        a{
+            text-shadow: none;
+        }
+    }
+    &__or{
+        text-transform: uppercase;
+        margin-top: 15px;
+    }
+    &__or:before, &__or:after{
+        content: "";
+        display: block;
+        width: 230px;
+        height: 2px;
+        position: absolute;
+        background-color: #C4C4C4;
+        top: 196px;
+    }
+    &__or:before{
+        left: 145px;
+    }
+    &__or:after{
+        left: 460px;
+    }
+    &__img{
+        position: relative;
+        img{
+            object-fit: fill;
+        }
+    }
+    &__logo{
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 48px;
+        color: #FFFFFF;
+        position: absolute;
+        top: 15px;
+        right: 30px;
+    }
+    &__text{
+        padding: 30px 102px 85px 115px;
+        width: 1600px;
+        position: relative;
+    }
+    &__rules{
+        display: inline;
+        margin-left: 16px;
+    }
+    &__google{
+        border: none;
+    }
+    &__choice{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        button {
+            display: flex!important;
+            border-radius: 15px!important;
+            margin: 15px auto 0px auto!important;
+        }
+    }
+    &__form{
+        margin-top: 10px;
+        margin-left: 32px;
+        position: relative;
+    }
+    &__errorMessage{
+        color: red;
+        margin-top: 5px;
+    }
+    input.modal__errorInput{
+        border-color: red;
+    }
+    #submit {
+        text-align: center;
+        border-radius: 17px;
+        background: #FAE3B6;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border: none;
+        width: 472px;
+        height: 60px;
+        cursor: pointer;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -110px;
+        &:focus{
+            outline: none;
+        }
+    }
+    #rules{
+        width: auto;
+    }
+    legend{
+        margin-bottom: 0px;
+        font-family: 'Frank Ruhl Libre';
+        font-weight: 500;
+        font-size: 24px;
+        color: #868686;
+    }
+    input {
+        border-color: #868686;
+        border-radius: 20px;
+        width: 96%;  
+        padding: 5px 10px 5px 10px;
+    }
+    #passwordField{
+        position: relative;
+    }
+    fieldset{
+        margin-top: 15px;
+        &.modal__checkbox{
+            margin-top: 25px;
+        }
+    }
+}
+
+.password-control {
+	position: absolute;
+	top: 9px;
+	right: 40px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(./resources/eye-off.svg) 0 0 no-repeat;
+    border: none;
+    cursor: pointer;
+    &:focus{
+        outline: none;
+    }
+}
+.password-control.view {
+	background: url(./resources/eye.svg) 0 0 no-repeat;
+}

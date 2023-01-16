@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Podkova:wght@700&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title{
+  font-family: 'Frank Ruhl Libre';
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.btn{
+  margin-top: 76px;
+  background-color:#000;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  width: 320px;
+  height: 86px;
+}
+
+.menubar-list{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  list-style: none;
+}
+
+.menubar-item{
+  margin-right: 60px;
+    a{
+        text-decoration: none;
+        color: #000;
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
+.products{
+  &__item{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    &-title{
+        color: rgba(0, 0, 0, 1);
+        font-size: 22px;
+        font-weight: 600;
+    }
+  }
+  &__description{
+    background-color: #fff;
+    padding: 15px 0px 20px 22px;
+    img{
+        margin-right: 8px;
+    }
+  }
+  &__price{
+    display: flex;
+    max-width: 187px;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 400;
+    &-old{
+        color: rgba(196, 196, 196, 1);
+    }
+  }
+  &__img {
+      border-radius: 60px 60px 0px 0px;
+      background-color: transparent;
+      img{
+          object-fit: cover;
+      }
+  }
+}
+

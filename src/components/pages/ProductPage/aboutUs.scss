@@ -1,0 +1,79 @@
+.about {
+    &__title{
+        text-align: center;
+    }
+    &__subtitle{
+        text-align: center;
+        margin-top: 35px;
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    &__comment{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    &__comment__wrapper{
+        font-size: 18px;
+        line-height: 27px;
+        background-color: #FEECC8;
+        width: 515px;
+        height: 364px;
+        padding: 35px 25px 16px 34px;
+        margin-right: 50px;
+    }
+    &__comment_title, &__name{
+        font-family: 'Poppins';
+        font-weight: 700;
+        text-align: center;
+    }
+    &__text{
+        font-family: 'Poppins';
+        font-weight: 400;
+        margin-top: 41px;
+    }
+    &__author{
+        display: flex;
+        flex-direction: column;
+        img {
+            border-radius: 100%;
+            height: 75px;
+            width: 75px;
+            margin: 0 auto;
+        }
+    }
+    &__prof{
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+    }
+}
+
+
+.glide{
+    &__slide{
+        display: flex;
+        justify-content: center;
+    }
+    &__bullets{
+        top: 105%;
+    }
+    &__bullet{
+        height: 17px;
+        width: 17px;
+        background-color: transparent;
+        border-radius: 100%;
+        border: 1px solid black;
+        &--active{
+            background-color: #000;
+        }
+        &:hover, &:focus{
+            background-color: black;
+            border: 1px solid black;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.products {
+  padding: 36px 24px 77px 130px;
+  background: linear-gradient(180deg, #CFA485 68.72%, rgba(199, 155, 123, 0) 100%);
+  position: relative;
+  z-index: 1;
+}
+.products__wrapper {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1359px;
+  overflow: hidden;
+  justify-content: space-between;
+}
+.products__title {
+  color: white;
+  margin-left: 15px;
+}
+.products__slider {
+  display: flex;
+  justify-content: center;
+}
+.products__examples {
+  display: grid;
+  grid-template-columns: 366px 366px;
+  -moz-column-gap: 67px;
+       column-gap: 67px;
+  align-items: center;
+}
+.products__content {
+  max-width: 457px;
+  margin-right: 100px;
+}
+.products__text {
+  font-family: "Frank Ruhl Libre";
+  font-weight: 500;
+  font-size: 24px;
+  color: white;
+  margin-top: 43px;
+  margin-left: 15px;
+}
+.products__dots-wrapper {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+.products__dot {
+  width: 17px;
+  height: 17px;
+  border: solid 1px black;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.products__dot-active {
+  background-color: #000;
+}
+
+.carousel-item {
+  margin: 0 auto;
+}
+.carousel-indicators {
+  bottom: -97px;
+  left: -100px;
+}
+.carousel-indicators li {
+  height: 17px;
+  width: 17px;
+  background-color: transparent;
+  border-radius: 100%;
+  border: 1px solid black;
+}
+.carousel-indicators .active {
+  background-color: #000;
+}/*# sourceMappingURL=products.css.map */

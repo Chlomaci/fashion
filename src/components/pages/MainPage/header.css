@@ -1,0 +1,219 @@
+.header {
+  background: rgb(250, 227, 182);
+  background: linear-gradient(rgb(250, 227, 182) 0%, rgb(250, 227, 182) 60%, rgb(255, 255, 255) 100%);
+}
+.header__menubar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 20px 0px 88px;
+}
+.header__menubar-logo {
+  font-size: 48px;
+  font-weight: 600;
+}
+.header__menubar-welcome button {
+  border: solid 1px #FAE3B6;
+  border-radius: 15px;
+  background-color: transparent;
+  width: 121px;
+  height: 57px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+}
+.header__menubar-welcome .header__menubar-btn {
+  margin-right: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.header__menubar-welcome .header__menubar-btn:hover {
+  background: linear-gradient(77.49deg, #FDBB57 0%, rgba(251, 251, 251, 0) 100%);
+  box-shadow: inset 4px 4px 4px #F2D09B, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.header__promo {
+  min-height: 543px;
+  padding: 123px 80px 0px 88px;
+}
+.header__promo-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.header__promo-content {
+  max-width: 556px;
+  position: relative;
+  z-index: 1;
+}
+.header__promo-title {
+  font-size: 64px;
+  font-weight: 600;
+}
+.header__promo-text {
+  font-size: 22px;
+  margin-top: 45px;
+}
+.header__promo-photo img {
+  border-radius: 0px 0px 0px 195px;
+  position: relative;
+  z-index: 1;
+}
+.header__curves img {
+  margin-top: 95px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.header__rectangle {
+  position: absolute;
+  width: 28.5%;
+  height: 461px;
+  left: -11px;
+  top: 654px;
+  background: linear-gradient(360deg, #FFD18D 0%, rgba(255, 250, 243, 0) 100%);
+  border-radius: 72px;
+  z-index: 0;
+}
+.header__points {
+  position: absolute;
+  left: 992px;
+  top: 646px;
+  z-index: 0;
+}
+.header__points img {
+  width: 130%;
+}
+.header__fixed-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.modal {
+  position: absolute;
+  border-radius: 25px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1440px;
+  height: 744px;
+  display: block;
+}
+.modal_container {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.modal__title, .modal__subtitle, .modal__subtitle a, .modal__or, .modal__rules, .modal__rules a, .modal button {
+  text-align: center;
+  font-family: "Frank Ruhl Libre";
+  font-weight: 500;
+  font-size: 24px;
+}
+.modal__subtitle, .modal__rules {
+  color: #868686;
+}
+.modal__subtitle a, .modal__rules a {
+  color: #F59C15;
+  text-decoration: none;
+}
+.modal__subtitle {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.modal__subtitle a {
+  text-shadow: none;
+}
+.modal__or {
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+.modal__or:before, .modal__or:after {
+  content: "";
+  display: block;
+  width: 230px;
+  height: 2px;
+  position: absolute;
+  background-color: #C4C4C4;
+  top: 196px;
+}
+.modal__or:before {
+  left: 145px;
+}
+.modal__or:after {
+  left: 460px;
+}
+.modal__img {
+  position: relative;
+}
+.modal__img img {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.modal__logo {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 48px;
+  color: #FFFFFF;
+  position: absolute;
+  top: 15px;
+  right: 30px;
+}
+.modal__text {
+  padding: 30px 102px 85px 115px;
+  width: 1600px;
+  position: relative;
+}
+.modal__rules {
+  display: inline;
+  margin-left: 16px;
+}
+.modal__checkbox {
+  margin-top: 25px;
+}
+.modal__google {
+  border: none;
+}
+.modal__choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal__choice button {
+  display: flex !important;
+  border-radius: 15px !important;
+  margin: 15px auto 0px auto !important;
+}
+.modal__form {
+  margin-top: 10px;
+  margin-left: 32px;
+}
+.modal #submit {
+  margin-top: 30px;
+  text-align: center;
+  border-radius: 17px;
+  background: #FAE3B6;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  width: 472px;
+  height: 60px;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.modal #checkbox {
+  width: auto;
+}
+.modal legend {
+  font-family: "Frank Ruhl Libre";
+  font-weight: 500;
+  font-size: 24px;
+  color: #868686;
+}
+.modal input {
+  border-color: #868686;
+  border-radius: 20px;
+  width: 96%;
+  padding: 5px 10px 5px 10px;
+}/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,64 @@
+@charset "UTF-8";
+.timer {
+  padding: 120px 60px 120px 46px;
+  color: #000;
+}
+.timer__wrapper {
+  background-color: #FAE3B6;
+  border-radius: 15px;
+  padding-bottom: 41px;
+  display: flex;
+  justify-content: space-around;
+}
+.timer__info {
+  padding-top: 105px;
+  max-width: 800px;
+}
+.timer__img {
+  padding-top: 51px;
+  position: relative;
+}
+.timer__img img {
+  border-radius: 21px;
+}
+.timer__points {
+  position: absolute;
+  bottom: -50px;
+  left: -71px;
+  z-index: 0;
+}
+.timer__card {
+  position: relative;
+  z-index: 1;
+}
+.timer__text {
+  margin-top: 47px;
+  font-family: "Frank Ruhl Libre";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+}
+.timer__сount {
+  display: flex;
+  max-width: 363px;
+  margin-top: 70px;
+}
+.timer__block {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 30px 0px 30px;
+  height: 108px;
+  width: 205px;
+  background-color: #fff;
+  text-align: center;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin-right: 30px;
+}
+.timer__block span {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+}/*# sourceMappingURL=timerSection.css.map */
