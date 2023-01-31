@@ -1,32 +1,14 @@
-import { useState } from 'react';
-import { useEffect } from 'react';
+import ProductItems from './ProductsItems';
 
 import './productsList.scss';
 
 const ProductsList = () => {
-    const {hot, setHot} = useState(true),
-        {onSale, setOnSale} = useState(false),
-        {onTrend, setOnTrend} = useState(false),
-        {newItems, setNewItems} = useState(false);
 
     const changeActiveStatus = (e) => {
         const activeLink = document.querySelector('.active');
         activeLink.classList.remove('active');
         e.target.classList.add('active');
     }
-
-    const catalogArr = []
-
-    fetch('', {
-        method: 'POST',
-        body: JSON.stringify(),
-        headers: {
-            'Content-type': 'application/json'
-        }
-    })
-        .then(response => response.json())
-        .then(json => catalogArr = json)
-
 
     return (
         <section className='productList'>
@@ -39,7 +21,7 @@ const ProductsList = () => {
                     <li className="productList__menubar-link">New arrival</li>
                 </ul>
             </div>
-            <div className="productList__catalog">something</div>
+            <div className="productList__wrapper"><ProductItems/></div>
         </section>
     )
 }

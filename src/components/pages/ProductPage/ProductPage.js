@@ -1,16 +1,21 @@
-import ProductsList from './ProductsList';
+import { Provider } from 'react-redux'
+import ProductsList from './ProductsList/ProductsList';
 import TimerSection from './TimerSection';
 import AboutUs from './AboutUs';
 import Footer from './Footer';
+import store from '../../../store/store';
 
 
 import './productPage.scss';
 import './titles.scss'
 
 const ProductPage = () => {
+
     return (
         <div className='productPage'>
-            <ProductsList/>
+            <Provider store={store}>
+                <ProductsList/>
+            </Provider> 
             <TimerSection/>
             <AboutUs/>
             <Footer/>

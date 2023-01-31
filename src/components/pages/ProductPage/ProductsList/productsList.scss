@@ -40,9 +40,36 @@
             }
         }
     }
-    &__catalog{
+    &__wrapper{
+        margin-top: 50px;
+        max-width: 100%;
         display: flex;
-        justify-content: space-between;
-        align-content: space-between;
+        justify-content: center;
+    }
+    &__catalog{
+        // display: flex;
+        // justify-content: space-between;
+        // align-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 425px);
+        grid-template-rows: repeat(2, 526px);
+        column-gap: 100px;
+        row-gap: 50px;
+        .products__item {
+            img{
+                max-height: 326px;
+                object-fit: contain;
+            }
+            .products__rating{
+                margin-top: 10px;
+            }
+            .products__item-title{
+                margin-top: 10px;
+            }
+            .products__price-old{
+                color: rgba(0, 0, 0, 1);
+                margin-top: 5px;
+            }
+        }
     }
 }

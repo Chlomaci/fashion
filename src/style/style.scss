@@ -47,16 +47,25 @@
 }
 .products{
   &__item{
+    max-width: 425px;
+    max-height: 526px;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    a {
+      margin: 0 auto;
+    }
     &-title{
-        color: rgba(0, 0, 0, 1);
-        font-size: 22px;
-        font-weight: 600;
+        a{
+          color: rgba(0, 0, 0, 1);
+          font-size: 22px;
+          font-weight: 600;
+          text-decoration: none;
+        }
     }
   }
   &__description{
+    height: 122px;
     background-color: #fff;
     padding: 15px 0px 20px 22px;
     img{
@@ -74,11 +83,11 @@
     }
   }
   &__img {
-      border-radius: 60px 60px 0px 0px;
-      background-color: transparent;
-      img{
-          object-fit: cover;
-      }
+    border-radius: 60px 60px 0px 0px;
+    background-color: transparent;
+    img{
+        object-fit: cover;
+    }
   }
 }
 
