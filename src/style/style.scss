@@ -47,15 +47,16 @@
 }
 .products{
   &__item{
-    max-width: 425px;
     max-height: 526px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     margin-top: 20px;
     a {
       margin: 0 auto;
     }
     &-title{
+      margin-top: 10px;
         a{
           color: rgba(0, 0, 0, 1);
           font-size: 22px;
@@ -67,10 +68,16 @@
   &__description{
     height: 122px;
     background-color: #fff;
-    padding: 15px 0px 20px 22px;
+    padding: 0px 0px 20px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     img{
         margin-right: 8px;
     }
+  }
+  &__rating{
+    margin-top: 10px;
   }
   &__price{
     display: flex;
@@ -85,9 +92,7 @@
   &__img {
     border-radius: 60px 60px 0px 0px;
     background-color: transparent;
-    img{
-        object-fit: cover;
-    }
+    max-width: 425px;
   }
 }
 

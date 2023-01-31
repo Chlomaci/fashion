@@ -47,13 +47,10 @@
         justify-content: center;
     }
     &__catalog{
-        // display: flex;
-        // justify-content: space-between;
-        // align-content: space-between;
         display: grid;
         grid-template-columns: repeat(3, 425px);
         grid-template-rows: repeat(2, 526px);
-        column-gap: 100px;
+        column-gap: 70px;
         row-gap: 50px;
         .products__item {
             img{

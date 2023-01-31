@@ -3,31 +3,27 @@ import { useHttp } from "../../../../hooks/http.hook";
 
     const productsAdapter = createEntityAdapter();
 
-    // const initialState = {
-    //     // 'hot': true,
-    //     // 'onSale': false,
-    //     // 'onTrend': false,
-    //     // 'newItems': false,
-    //     'entities': [],
-    //     'loadingStatus': 'idle',
-    // }
-
     const initialState = productsAdapter.getInitialState({
-        'loadingStatus': 'idle'
+        loadingStatus: 'idle',
+        activeCategory: 'hot'
     });
 
     export const fetchHotItems = createAsyncThunk(
         'products/fetchHotItems',
-        async () => {
+        async (url) => {
             const {getItems} = useHttp();
-            return await getItems("https://fakestoreapi.com/products/category/women's%20clothing?limit=6");
+            return await getItems(url);
         }
     );
-
 
     const productsSlice = createSlice({
         name: 'products',
         initialState,
+        reducers: {
+            categoryChanged: (state, action) => {
+                state.activeCategory = action.payload;
+            }
+        },
         extraReducers: (builder) => {
             builder
                 .addCase(fetchHotItems.pending, state => {state.loadingStatus = 'loading'})
@@ -45,6 +41,7 @@ import { useHttp } from "../../../../hooks/http.hook";
     const {actions, reducer} = productsSlice;
 
     export const {selectAll} = productsAdapter.getSelectors(state => state.products);
+    export const {categoryChanged} = actions;
 
     export default reducer;
     

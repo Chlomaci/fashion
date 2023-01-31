@@ -13,14 +13,29 @@ const ProductItems = () => {
     const dispatch = useDispatch();
     const {getItems} = useHttp();
     const {loadingStatus} = useSelector(state => state.products);
-    console.log(loadingStatus);
+    const {activeCategory} = useSelector(state => state.products);
     const productsArr = selectAll(store.getState());
     console.log(productsArr)
 
     useEffect(() => {
-        dispatch(fetchHotItems(getItems));
+        switch (activeCategory) {
+            case 'hot': 
+                dispatch(fetchHotItems("https://fakestoreapi.com/products/category/women's clothing?limit=6", getItems));
+                break;
+            case 'sale':
+                dispatch(fetchHotItems("https://fakestoreapi.com/products/category/men's clothing?limit=6", getItems));
+                break;
+            case 'trending':
+                dispatch(fetchHotItems("https://fakestoreapi.com/products/category/jewelery?limit=6", getItems));
+                break;
+            case 'new':
+                dispatch(fetchHotItems("https://fakestoreapi.com/products/category/electronics?limit=6", getItems));
+                break;  
+            default:
+                dispatch(fetchHotItems("https://fakestoreapi.com/products/category/women's clothing?limit=6", getItems));
+        }
         // eslint-disable-next-line
-    }, []);
+    }, [activeCategory]);
 
     if (loadingStatus === "loading") {
         return <Spinner/>;
@@ -28,7 +43,7 @@ const ProductItems = () => {
         return <h5 className="text-center mt-5">Ошибка загрузки</h5>
     }
 
-    productsArr.sort((a, b) => a.age < b.age ? 1 : -1);
+    productsArr.sort((a, b) => a.rating < b.rating ? 1 : -1);
 
     const renderItems = productsArr.map(({name, price, img, rating}) => {
                 return (
