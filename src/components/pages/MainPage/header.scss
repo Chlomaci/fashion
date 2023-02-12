@@ -5,12 +5,21 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        // display: grid;
+        // grid-template-columns: repeat(3, 1fr);
+        // place-content: space-between center;
+        // place-items: center center;
+
+        column-gap: 3vw;
+
         padding: 45px 20px 0px 88px;
         &-logo{
             font-size: 48px;
             font-weight: 600;
         }
         &-welcome{
+            display: flex;
+            flex-wrap: wrap;
             button {
                 border: solid 1px #FAE3B6;
                 border-radius: 15px;
@@ -23,6 +32,7 @@
                 line-height: 36px;
             }
             .header__menubar-btn{
+                margin-top: 10px;
                 margin-right: 10px;
                 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
                 &:hover{
@@ -46,7 +56,7 @@
             z-index: 1;
         }
         &-title{
-            font-size: 64px;
+            font-size: 4vw;
             font-weight: 600;
         }
         &-text{
@@ -58,12 +68,14 @@
                 border-radius: 0px 0px 0px 195px;
                 position: relative;
                 z-index: 1;
+                height: 66vh;
             }
         }
     }
     &__curves{
         img{
-            margin-top: 95px;
+            //margin-top: 95px;
+            margin-top: 2vh;
             position: relative;
             width: 100%;
             z-index: 1;
@@ -109,14 +121,14 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 1440px;
-    min-height: 844px;
-    max-height: 844px;
+    width: 80vw;
+    height: 80vh;
     display: block;
     &_container{
         background-color: #fff;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        height: 100%;
     }
     &__title, &__subtitle, &__subtitle a, &__or, &__rules, &__rules a, button{
         text-align: center;
@@ -140,26 +152,37 @@
     &__or{
         text-transform: uppercase;
         margin-top: 15px;
+        position: relative;
     }
     &__or:before, &__or:after{
         content: "";
         display: block;
-        width: 230px;
+        // width: 230px;
+        // width: 13vw;
+        width: 28%;
         height: 2px;
         position: absolute;
         background-color: #C4C4C4;
-        top: 196px;
+        // top: 196px;
+        // top: 51vh;
+        top: 50%;
+        transform: translateY(-50%);
     }
     &__or:before{
-        left: 145px;
+        // left: 145px;
+        left: 55%;
     }
     &__or:after{
-        left: 460px;
+        // left: 460px;
+        left: 18%;
     }
     &__img{
         position: relative;
+        width: 50%;
         img{
-            object-fit: fill;
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
         }
     }
     &__logo{
@@ -172,9 +195,11 @@
         right: 30px;
     }
     &__text{
-        padding: 30px 102px 85px 115px;
-        width: 1600px;
+        padding: 30px 50px 10px 50px;
+        // width: 1600px;
+        width: 50%;
         position: relative;
+        height: 100%;
     }
     &__rules{
         display: inline;
@@ -197,6 +222,11 @@
         margin-top: 10px;
         margin-left: 32px;
         position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 60%;
     }
     &__errorMessage{
         color: red;
@@ -211,13 +241,17 @@
         background: #FAE3B6;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border: none;
-        width: 472px;
+        // width: 472px;
+        // width: 100%;
+        width: 30vw;
         height: 60px;
+        margin: 15px auto 0px auto !important;
         cursor: pointer;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -110px;
+        // position: absolute;
+        // left: 50%;
+        // transform: translateX(-50%);
+        // // bottom: -110px;
+        // bottom: -50%;
         &:focus{
             outline: none;
         }
@@ -242,9 +276,9 @@
         position: relative;
     }
     fieldset{
-        margin-top: 15px;
+        // margin-top: 15px;
         &.modal__checkbox{
-            margin-top: 25px;
+            // margin-top: 25px;
         }
     }
 }
@@ -266,3 +300,4 @@
 .password-control.view {
 	background: url(./resources/eye.svg) 0 0 no-repeat;
 }
+

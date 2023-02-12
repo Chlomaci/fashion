@@ -1,0 +1,10 @@
+@import "../components/pages/MainPage/media/mediaMainPage";
+
+@media (max-width: 320px){
+    .title{
+        font-size: 7vh;
+    }
+    .btn{
+        width: 284px;
+    }
+  }

@@ -3,6 +3,7 @@ import { GoogleLogin } from '@leecheuk/react-google-login';
 import { gapi } from 'gapi-script';
 import { useEffect, useState } from 'react';
 import { useFormik } from 'formik';
+import BurgerMenu from './BurgerMenu';
 import * as Yup from 'yup';
 
 import './header.scss';
@@ -67,7 +68,7 @@ const MainHeader = () => {
           email: Yup.string().email('Invalid email address').required('Required'),          
           password: Yup.string().min(6, 'Must be 6 characters or more')
             .required('Required'),
-            rules: Yup.boolean().oneOf([true],'Please, read the Terms'),
+          rules: Yup.boolean().oneOf([true],'Please, read the Terms'),
         }),
         onSubmit: values => {
           alert(JSON.stringify(values, null, 2));
@@ -82,18 +83,8 @@ const MainHeader = () => {
 
     const offError = (fieldId) => {
         const field = document.querySelector(fieldId);
-        field.style.borderColor = "#868686";
+        // field.style.borderColor = "#868686";
     }
-
-    // const offError = (fieldId) => {
-    //     const field = document.querySelector(fieldId)
-    //     if (field.classList.contains('modal__errorInput')){
-    //         field.classList.remove('modal__errorInput');
-    //     } else {
-    //         return
-    //     }
-    // }
-
 
     // to change password view
 
@@ -154,13 +145,13 @@ const MainHeader = () => {
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
                                     value={formik.values.name}
+                                    className="modal__input"
                                     />
                                     {formik.touched.name && formik.errors.name ? (
                                         <>
                                             {onError('#name')}
                                             <div className="modal__errorMessage">{formik.errors.name}</div>
-                                        </>
-                                        ) : null}
+                                        </>) : null}
                             </fieldset>
                             <fieldset>
                                 <legend>Email Adress</legend>
@@ -223,6 +214,7 @@ const MainHeader = () => {
                 </div>
             </div>
         </div>
+        <BurgerMenu/>
         <div className="header__menubar">
             <div className="header__menubar-logo">Fresh</div>
             <div className="header__menubar-links">

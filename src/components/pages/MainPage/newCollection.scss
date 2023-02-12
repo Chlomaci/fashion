@@ -15,23 +15,26 @@
         &-img{
             position: relative;
             z-index: 1;
+            height: 100%;
         }
         img{
-            width: 350px;
-            height: 402px;
+            height: 100%;
+            width: 100%;
             object-fit: cover;
             border-radius: 20px;
             position: relative;
             transition: filter 0.4s ease-in-out;
         }
         &-wrapper{
-            display: flex;
-            justify-content: space-around;
-            padding: 60px 74px 0px 90px;
+            padding: 60px 0px 0px 4%;
+            display: grid;
+            grid-template-columns: repeat(3, 25vw);
+            column-gap: 1%;
+            justify-content: center;
         }
     }
     &__button{
-        width: 315px;
+        width: 90%;
         height: 57px;
         background-color: #fff;
         border: none;
@@ -55,7 +58,7 @@
         position: absolute;
         width: 240px;
         height: 327px;    
-        right: 0px;
+        right: 0vw;
         bottom: -100px;
         z-index: 0;
 

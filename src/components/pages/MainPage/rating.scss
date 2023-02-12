@@ -1,20 +1,26 @@
 .rating {
     padding-top: 235px;
-    min-height: 1257px;
+    // min-height: 1257px;
+    min-height: 130vh;
     position: relative;
     &__wrapper{
-        display: flex;
+        //display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 50%);
+        justify-items: center;
+        // column-gap: 10%;
         
     }
     img {
-        margin-right: 124px;
-        margin-left: 120px;
+        // margin-right: 124px;
+        // margin-left: 120px;
         border-radius: 150px 0px 0px 0px;
         position: relative;
         z-index: 1;
+        width: 35vw;
     }
     &__content{
-        max-width: 440px;
+        // max-width: 440px;
         margin-right: 169px;
     }
     &__text{
@@ -24,34 +30,58 @@
     }
     &__data{
         position: absolute;
-        width: 56%;
-        height: 300px;
-        right: 187px;
-        bottom: 110px;
+        // width: 56%;
+        // height: 300px;
+        // right: 187px;
+        // bottom: 110px;
+        // width: 56vw;
+        width: 50vw;
+        height: 30vh;
+        // right: 5%;
+        // bottom: 8%;
+        // right: 8vw;
+        // bottom: 12vh;
+        left: 40%;
+        bottom: 8%;
+        
         z-index: 0;
+        // display: grid;
+        // grid-template-columns: repeat(3, auto);
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        // justify-content: space-around;
         
         background: linear-gradient(83.43deg, #CD8922 0.44%, rgba(255, 184, 79, 0.45) 95.53%);
         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), inset 4px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 20px;
 
-        display: flex;
+        // display: flex;
         text-align: center;
         align-items: center;
-        justify-content: center;
+        // justify-content: center;
+        &-item{
+            position: relative;
+        }
     }
     &__number{
         font-family: 'Podkova';
-        font-size: 64px;
+        font-size: 5vw;
         font-weight: bold;
     }
     &__subtitle{
-        font-size: 28px;
+        font-size: 2vw;
         font-weight: medium;
     }
     &__line{
         border: 1px solid black;
-        height: 50%;
+        height: 100%;
         margin: 0px 60px 0px 60px;
+        position: absolute;
+        // left: 80%;
+        left: 115%;
+        // top: 9vh;
+        top: 7%;
     }
     &__points{
         position: absolute;
@@ -66,7 +96,7 @@
             }
         }
         &-bottom{
-            bottom: -70px;
+            bottom: -4%;
             left: 195px;
             img{
                 transform: scale(1, -1);

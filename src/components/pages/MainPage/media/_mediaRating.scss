@@ -1,0 +1,59 @@
+@media(max-width: 1366px){
+    .rating{
+        min-height: 150vh;
+    }
+}
+
+@media (max-width: 1024px){
+    .rating{
+        min-height: 167vh;
+    }
+    .rating__wrapper{
+        column-gap: 3vw;
+        margin-left: 5vw;
+    }
+    .rating img{
+        width: 50vw;
+    }
+    .rating__content{
+        width: 40vw;
+        margin-right: 0;
+    }
+    .rating__line{
+        display: none;
+    }
+    .rating__data{
+        left: 48%;
+        bottom: 18%;
+    }
+    .rating__points-bottom{
+        display: none;
+    }
+    .products {
+        padding-left: 45px;
+    }
+}
+
+@media (max-width: 800px){
+    .rating__text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px){
+    .rating{
+        min-height: 100vh;
+    }
+    .rating__data{
+        height: 18vh;
+        bottom: 22%;
+    }
+}
+
+@media (max-width: 320px){
+    .rating__text{
+        margin-top: 0;
+        font-size: 16px;
+    }
+}
+

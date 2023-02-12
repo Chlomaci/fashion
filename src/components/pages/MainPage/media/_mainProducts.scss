@@ -1,0 +1,20 @@
+@media (max-width: 1440px){
+    .products__examples{
+        margin-top: 2%;
+    }
+}
+
+@media (max-width: 480px){
+    .products__examples{
+        grid-template-columns: auto;
+    }
+    .carousel-indicators{
+        left: -5%;
+    }
+}
+
+@media (max-width: 320px){
+    .products{
+        padding-left: 10px;
+    }
+}

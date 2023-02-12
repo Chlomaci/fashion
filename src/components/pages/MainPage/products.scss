@@ -9,6 +9,7 @@
         max-width: 1359px;
         overflow: hidden;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__title{
         color: white;
@@ -20,9 +21,20 @@
     }
     &__examples{
         display: grid;
-        grid-template-columns: 366px 366px;
-        column-gap: 67px;
+        // grid-template-columns: 366px 366px;
+        // column-gap: 67px;
+        grid-template-columns: 50% 50%;
+        column-gap: 11px;
         align-items: center;
+    }
+    &__item{
+        width: 100%;
+        a{
+            width: 100%;
+        }
+    }
+    &__img{
+        width: 100%;
     }
     &__content{
         max-width: 457px;

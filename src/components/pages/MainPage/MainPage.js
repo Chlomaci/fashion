@@ -5,7 +5,7 @@ import Products from "./Products";
 
 import AOS from 'aos';
 
-import '/OSPanel/domains/fashion/my-app/src/style/aos/aos.scss';
+import  '../../../style/aos/aos.css';
 import "./mainPage.scss"
 
 const MainPage = () => {

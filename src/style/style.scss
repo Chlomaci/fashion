@@ -12,7 +12,7 @@
 .title{
   font-family: 'Frank Ruhl Libre';
   font-weight: 700;
-  font-size: 64px;
+  font-size: 4vw;
 }
 
 .btn{
@@ -30,14 +30,18 @@
 }
 
 .menubar-list{
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
+  // display: flex;
+  // justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 3vw;
   list-style: none;
 }
 
 .menubar-item{
-  margin-right: 60px;
+  // margin-right: 60px;
+
+
     a{
         text-decoration: none;
         color: #000;
@@ -51,7 +55,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-top: 20px;
+    // margin-top: 20px;
+    margin-top: 10%;
     a {
       margin: 0 auto;
     }
@@ -96,3 +101,4 @@
   }
 }
 
+@import './media'
