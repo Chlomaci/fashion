@@ -1,5 +1,5 @@
 import Glide from '@glidejs/glide';
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 
 import author1 from "./resources/author1.jpg";
 import author2 from "./resources/author2.jpg";
