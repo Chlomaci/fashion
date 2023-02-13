@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/fashion/static/css/main.baf776aa.css",
+    "main.js": "/fashion/static/js/main.7e4989d0.js",
+    "static/media/modal.png": "/fashion/static/media/modal.bb709c8e33b7248d2c38.png",
+    "static/media/footer.png": "/fashion/static/media/footer.e0e8878cca99c440403d.png",
+    "static/media/woman__blond.jpg": "/fashion/static/media/woman__blond.dd97f899f1cad2ceb064.jpg",
+    "static/media/red.jpg": "/fashion/static/media/red.728bb2512bafec757858.jpg",
+    "static/media/header.jpg": "/fashion/static/media/header.bb3246367492f54215c1.jpg",
+    "static/media/sweater.jpg": "/fashion/static/media/sweater.19c5f81b4083f5ae67f0.jpg",
+    "static/media/jeans.jpg": "/fashion/static/media/jeans.70268fb2cfe3e95108f7.jpg",
+    "static/media/baskets.jpg": "/fashion/static/media/baskets.43ea4cbb55b669729a49.jpg",
+    "static/media/pants_fashion.jpg": "/fashion/static/media/pants_fashion.56499dee61fa11d9d953.jpg",
+    "static/media/sweater_short.jpg": "/fashion/static/media/sweater_short.151f7108cc71921da14d.jpg",
+    "static/media/pointsProduct.svg": "/fashion/static/media/pointsProduct.812d10c853281de2d9620c0153b48bc2.svg",
+    "static/media/rating-points.svg": "/fashion/static/media/rating-points.9c3068069204dd5095f8e3904949bb5f.svg",
+    "static/media/points.svg": "/fashion/static/media/points.5bed0bbf44d979bdd351bfcc714a9484.svg",
+    "static/media/curves.svg": "/fashion/static/media/curves.fdf4e592783afe9978c97d499a6b0871.svg",
+    "index.html": "/fashion/index.html",
+    "static/media/eye-off.svg": "/fashion/static/media/eye-off.7deb5c3a910b5e596121.svg",
+    "static/media/eye.svg": "/fashion/static/media/eye.17d9ac39c416dbcfbbaa.svg",
+    "static/media/star.svg": "/fashion/static/media/star.b8da024e469b6d1b74d36255daab84e9.svg",
+    "main.baf776aa.css.map": "/fashion/static/css/main.baf776aa.css.map",
+    "main.7e4989d0.js.map": "/fashion/static/js/main.7e4989d0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.baf776aa.css",
+    "static/js/main.7e4989d0.js"
+  ]
+}
