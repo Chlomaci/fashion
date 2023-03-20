@@ -6,11 +6,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  -moz-column-gap: 3vw;
+       column-gap: 3vw;
   padding: 45px 20px 0px 88px;
 }
 .header__menubar-logo {
   font-size: 48px;
   font-weight: 600;
+}
+.header__menubar-welcome {
+  display: flex;
+  flex-wrap: wrap;
 }
 .header__menubar-welcome button {
   border: solid 1px #FAE3B6;
@@ -24,6 +30,7 @@
   line-height: 36px;
 }
 .header__menubar-welcome .header__menubar-btn {
+  margin-top: 10px;
   margin-right: 10px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -45,7 +52,7 @@
   z-index: 1;
 }
 .header__promo-title {
-  font-size: 64px;
+  font-size: 4vw;
   font-weight: 600;
 }
 .header__promo-text {
@@ -56,9 +63,10 @@
   border-radius: 0px 0px 0px 195px;
   position: relative;
   z-index: 1;
+  height: 66vh;
 }
 .header__curves img {
-  margin-top: 95px;
+  margin-top: 2vh;
   position: relative;
   width: 100%;
   z-index: 1;
@@ -88,6 +96,10 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 100;
+  display: none;
+}
+.header__fixed-overlay.active {
+  display: block;
 }
 
 .modal {
@@ -96,20 +108,21 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 1440px;
-  height: 744px;
+  width: 80vw;
+  height: 80vh;
   display: block;
 }
 .modal_container {
   background-color: #fff;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  height: 100%;
 }
 .modal__title, .modal__subtitle, .modal__subtitle a, .modal__or, .modal__rules, .modal__rules a, .modal button {
   text-align: center;
   font-family: "Frank Ruhl Libre";
   font-weight: 500;
-  font-size: 24px;
+  font-size: 22px;
 }
 .modal__subtitle, .modal__rules {
   color: #868686;
@@ -127,28 +140,33 @@
 .modal__or {
   text-transform: uppercase;
   margin-top: 15px;
+  position: relative;
 }
 .modal__or:before, .modal__or:after {
   content: "";
   display: block;
-  width: 230px;
+  width: 28%;
   height: 2px;
   position: absolute;
   background-color: #C4C4C4;
-  top: 196px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .modal__or:before {
-  left: 145px;
+  left: 55%;
 }
 .modal__or:after {
-  left: 460px;
+  left: 18%;
 }
 .modal__img {
   position: relative;
+  width: 50%;
 }
 .modal__img img {
-  -o-object-fit: fill;
-     object-fit: fill;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 .modal__logo {
   font-family: "Poppins";
@@ -160,16 +178,14 @@
   right: 30px;
 }
 .modal__text {
-  padding: 30px 102px 85px 115px;
-  width: 1600px;
+  padding: 30px 50px 10px 50px;
+  width: 50%;
   position: relative;
+  height: 100%;
 }
 .modal__rules {
   display: inline;
   margin-left: 16px;
-}
-.modal__checkbox {
-  margin-top: 25px;
 }
 .modal__google {
   border: none;
@@ -187,25 +203,38 @@
 .modal__form {
   margin-top: 10px;
   margin-left: 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60%;
+}
+.modal__errorMessage {
+  color: red;
+  margin-top: 5px;
+}
+.modal input.modal__errorInput {
+  border-color: red;
 }
 .modal #submit {
-  margin-top: 30px;
   text-align: center;
   border-radius: 17px;
   background: #FAE3B6;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: none;
-  width: 472px;
+  width: 30vw;
   height: 60px;
+  margin: 15px auto 0px auto !important;
   cursor: pointer;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
-.modal #checkbox {
+.modal #submit:focus {
+  outline: none;
+}
+.modal #rules {
   width: auto;
 }
 .modal legend {
+  margin-bottom: 0px;
   font-family: "Frank Ruhl Libre";
   font-weight: 500;
   font-size: 24px;
@@ -216,4 +245,25 @@
   border-radius: 20px;
   width: 96%;
   padding: 5px 10px 5px 10px;
+}
+.modal #passwordField {
+  position: relative;
+}
+.password-control {
+  position: absolute;
+  top: 9px;
+  right: 40px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(./resources/eye-off.svg) 0 0 no-repeat;
+  border: none;
+  cursor: pointer;
+}
+.password-control:focus {
+  outline: none;
+}
+
+.password-control.view {
+  background: url(./resources/eye.svg) 0 0 no-repeat;
 }/*# sourceMappingURL=header.css.map */

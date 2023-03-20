@@ -1,20 +1,20 @@
 .rating {
   padding-top: 235px;
-  min-height: 1257px;
+  min-height: 130vh;
   position: relative;
 }
 .rating__wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 50%);
+  justify-items: center;
 }
 .rating img {
-  margin-right: 124px;
-  margin-left: 120px;
   border-radius: 150px 0px 0px 0px;
   position: relative;
   z-index: 1;
+  width: 35vw;
 }
 .rating__content {
-  max-width: 440px;
   margin-right: 169px;
 }
 .rating__text {
@@ -24,32 +24,39 @@
 }
 .rating__data {
   position: absolute;
-  width: 56%;
-  height: 300px;
-  right: 187px;
-  bottom: 110px;
+  width: 50vw;
+  height: 30vh;
+  left: 40%;
+  bottom: 8%;
   z-index: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   background: linear-gradient(83.43deg, #CD8922 0.44%, rgba(255, 184, 79, 0.45) 95.53%);
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), inset 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  display: flex;
   text-align: center;
   align-items: center;
-  justify-content: center;
+}
+.rating__data-item {
+  position: relative;
 }
 .rating__number {
   font-family: "Podkova";
-  font-size: 64px;
+  font-size: 5vw;
   font-weight: bold;
 }
 .rating__subtitle {
-  font-size: 28px;
+  font-size: 2vw;
   font-weight: medium;
 }
 .rating__line {
   border: 1px solid black;
-  height: 50%;
+  height: 100%;
   margin: 0px 60px 0px 60px;
+  position: absolute;
+  left: 115%;
+  top: 7%;
 }
 .rating__points {
   position: absolute;
@@ -65,7 +72,7 @@
   height: 246px;
 }
 .rating__points-bottom {
-  bottom: -70px;
+  bottom: -4%;
   left: 195px;
 }
 .rating__points-bottom img {
